@@ -1,0 +1,978 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='allbot'>
+    <static>false</static>
+    <self_collide>true</self_collide>
+    <pose>0 0 0.5 0 0 0</pose>
+    <link name='chassis'>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <inertial>
+        <pose>0.34 0 0.25 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>0.12</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.2</iyy>
+          <iyz>0</iyz>
+          <izz>0.2</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='BACKBONE'>
+        <pose>0.34 0 0.071 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.015 0.335 0.263</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT_front_right'>
+        <pose>0 0.268792 0.071 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.310000 0.203000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT_front_left'>
+        <pose>0 -0.268792 0.071 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.310000 0.203000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT_back_right'>
+        <pose>0.6800 0.268792 0.071 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.310000 0.203000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT_back_left'>
+        <pose>0.68 -0.268792 0.071 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.310000 0.203000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='RASPBERRY_PI_B _ASSY_1'>
+        <pose>0.340000 0 0.292000 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.310000 0.300000 0.180000</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='RASPBERRY_PI_B _ASSY_2'>
+        <pose>0.340000 0 0.400000 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.700000 0.543000 0.040000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='RASPBERRY_PI_B _ASSY_3'>
+        <pose>0.425000 0 0.520000 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.880000 0.563000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='BACKBONE'>
+        <pose>0 0 0 3.141592 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_BACKBONE.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT_front_right'>
+      <pose>0 0.268792 0.071 0 0 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT_front_left'>
+      <pose>0 -0.268792 0.071 0 0 1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT_back_right'>
+      <pose>0.68 0.268792 0.071 0 0 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT_back_left'>
+      <pose>0.68 -0.268792 0.071 0 0 1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='RASPBERRY_PI_B _ASSY'>
+      <pose>0.590000 -0.05524 0.51862 0 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_RASPBERRY PI B+ ASSY.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--left_upper -->
+    <!--front_left_upper -->
+    <link name='front_left_upper'>
+      <pose>-0.379870 -0.148770 0.100000 0 1.570796 1.570796</pose>
+      <inertial>
+        <pose>0 -0.16 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.015</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT'>
+      <pose>0 -0.04875 -0.12 0 0 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--front_right_upper -->
+    <link name='front_right_upper'>
+      <pose>-0.381170 0.388620 0.100000 0 1.570796 1.570796</pose>
+      <inertial>
+        <pose>0 -0.16 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.015</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT'>
+      <pose>0 -0.04875 -0.12 0 3.141592 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--back_right_upper -->
+    <link name='back_right_upper'>
+      <pose>1.05996 0.148420 0.100000 0 1.570796 -1.570796</pose>
+      <inertial>
+        <pose>0 -0.16 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.015</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT'>
+      <pose>0 -0.04875 -0.12 0 0 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--back_left_upper -->
+    <link name='back_left_upper'>
+      <pose>1.05996 -0.389230 0.100000 0 1.570796 -1.570796</pose>
+      <inertial>
+        <pose>0 -0.16 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.015</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='SERVO_MOUNT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='SERVO_MOUNT'>
+      <pose>0 -0.04875 -0.12 0 3.141592 -1.570796</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SERVO MOUNT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--left_lower -->
+    <!--front_left_lower -->
+    <link name='front_left_lower'>
+      <pose>-0.766500 -0.226250 0.275000 0 0 1.570796</pose>
+      <self_collide>true</self_collide>
+      <inertial>
+        <pose>0 -0.13 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.02666667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02</iyy>
+          <iyz>0</iyz>
+          <izz>0.04</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT_2'>
+        <pose>0 0.115 -0.195 -0.470000 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.22000 0.09000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='FLAT_FOOT'>
+      <pose>-0.15 -0.15 -0.24 -1.580796 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_FLAT FOOT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--front_right_lower -->
+    <link name='front_right_lower'>
+      <pose>-0.766500 0.226250 0.275000 0 0 1.570796</pose>
+      <self_collide>true</self_collide>
+      <inertial>
+        <pose>0 -0.13 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.02666667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02</iyy>
+          <iyz>0</iyz>
+          <izz>0.04</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT_2'>
+        <pose>0 0.115 -0.195 -0.470000 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.22000 0.09000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='FLAT_FOOT'>
+      <pose>-0.15 -0.15 -0.24 -1.580796 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_FLAT FOOT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--back_right_lower -->
+    <link name='back_right_lower'>
+      <pose>1.446200 0.226250 0.275000 0 0 -1.570796</pose>
+      <self_collide>true</self_collide>
+      <inertial>
+        <pose>0 -0.13 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.02666667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02</iyy>
+          <iyz>0</iyz>
+          <izz>0.04</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT_2'>
+        <pose>0 0.115 -0.195 -0.470000 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.22000 0.09000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='FLAT_FOOT'>
+      <pose>-0.15 -0.15 -0.24 -1.580796 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_FLAT FOOT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!--back_left_lower -->
+    <link name='back_left_lower'>
+      <pose>1.446200 -0.226250 0.275000 0 0 -1.570796</pose>
+      <self_collide>true</self_collide>
+      <inertial>
+        <pose>0 -0.13 -0.13 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.02666667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02</iyy>
+          <iyz>0</iyz>
+          <izz>0.04</izz>
+        </inertia>
+      </inertial>
+      <!-- collisions -->
+      <collision name='SWING_ARM'>
+        <pose>0 -0.34 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.450000 0.37000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT'>
+        <pose>0 -0.05 -0.12 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.21000 0.190000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='FLAT_FOOT_2'>
+        <pose>0 0.115 -0.195 -0.470000 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.30000 0.22000 0.09000</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <!-- visuals -->
+      <visual name='SWING_ARM'>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_SWING ARM.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+      <visual name='FLAT_FOOT'>
+      <pose>-0.15 -0.15 -0.24 -1.580796 0 0</pose>
+        <geometry>
+        <mesh>
+          <uri>model://allbot/meshes/VIS_FLAT FOOT.dae</uri>
+	      <scale>0.01 0.01 0.01</scale>
+        </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!-- joints_upper -->
+    <joint type='revolute' name='front_right_upper'>
+      <pose>0 -0.435000 -0.120300 0 0 0</pose>
+      <child>front_right_upper</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-2.35619449019</lower>
+          <upper>0.0</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='front_left_upper'>
+      <pose>0 -0.435000 -0.120300 0 0 0</pose>
+      <child>front_left_upper</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>0.0</lower>
+          <upper>2.35619449019</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='back_right_upper'>
+      <pose>0 -0.435000 -0.120300 0 0 0</pose>
+      <child>back_right_upper</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>0.0</lower>
+          <upper>2.35619449019</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='back_left_upper'>
+      <pose>0 -0.435000 -0.120300 0 0 0</pose>
+      <child>back_left_upper</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-2.35619449019</lower>
+          <upper>0.0</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- joints_lower -->
+    <joint type='revolute' name='front_right_lower'>
+      <pose>0 -0.434600 -0.120000 0 0 0</pose>
+      <child>front_right_lower</child>
+      <parent>front_right_upper</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-1.5707963267948966</lower>
+          <upper>1.5707963267948966</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='front_left_lower'>
+      <pose>0 -0.434600 -0.120000 0 0 0</pose>
+      <child>front_left_lower</child>
+      <parent>front_left_upper</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-1.5707963267948966</lower>
+          <upper>1.5707963267948966</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='back_right_lower'>
+      <pose>0 -0.434600 -0.120000 0 0 0</pose>
+      <child>back_right_lower</child>
+      <parent>back_right_upper</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-1.5707963267948966</lower>
+          <upper>1.5707963267948966</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint type='revolute' name='back_left_lower'>
+      <pose>0 -0.434600 -0.120000 0 0 0</pose>
+      <child>back_left_lower</child>
+      <parent>back_left_upper</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50.0</effort>
+          <lower>-1.5707963267948966</lower>
+          <upper>1.5707963267948966</upper>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <plugin name='generic_controller' filename='libgeneric_controller_plugin.so'>
+        <controller joint_name='front_left_upper'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='front_left_lower'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='front_right_upper'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='front_right_lower'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='back_left_upper'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='back_left_lower'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='back_right_upper'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+        <controller joint_name='back_right_lower'>
+          <type>position</type>
+          <pid>100.0 0.01 10.0</pid>
+        </controller>
+    </plugin>
+  </model>
+</sdf>
