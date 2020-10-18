@@ -1,9 +1,10 @@
 # allbot
-<b> The Allbot is a simple four-legged robot controlled by a raspberry pi.
-This repository contains an simulation description file (SDF) of the Allbot. </b>
+The Allbot is a simple four-legged robot controlled by a raspberry pi.
+This repository contains an simulation description file (SDF) of the Allbot.
 
-<b> The Allbot is available at https://www.velleman.eu/products/view/?id=431570 </b>
-<b> The used meshes are available at https://www.thingiverse.com/thing:1434665 </b>
+The Allbot is available at https://www.velleman.eu/products/view/?id=431570
+  
+The used meshes are available at https://www.thingiverse.com/thing:1434665
 
 # SDF
 
