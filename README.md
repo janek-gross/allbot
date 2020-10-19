@@ -6,13 +6,14 @@ The Allbot is available at https://www.velleman.eu/products/view/?id=431570
   
 The used meshes are available at https://www.thingiverse.com/thing:1434665
 
-# SDF
-
+# Simulation
+#### The following screenshots were created using the Gazebo simulation software.
 
 <img src="https://github.com/janek-gross/allbot/blob/main/images/visual.png?raw=true" width="400" />
 
 <img src="https://github.com/janek-gross/allbot/blob/main/images/allbot_visual.jpg?raw=true" width="400" />
 
+#### Image of the actual Allbot
 <img src="https://vertex3dprinter.eu/wp-content/uploads/2018/07/vr618-600x450.jpg?raw=true" width="400" />
 
 # License
