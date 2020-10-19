@@ -8,8 +8,7 @@ The used meshes are available at https://www.thingiverse.com/thing:1434665
 
 # SDF
 
-<a src="https://github.com/janek-gross/allbot/blob/master/images/allbot_photo.jpg?raw=true" width="400" >
-</a>
+<img src="https://github.com/janek-gross/allbot/blob/master/images/allbot_photo.jpg?raw=true" width="400" />
 
 <img src="https://github.com/janek-gross/allbot/blob/master/images/allbot_visual.jpg?raw=true" width="400" />
 
