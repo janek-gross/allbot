@@ -9,7 +9,7 @@ The used meshes are available at https://www.thingiverse.com/thing:1434665
 # Simulation
 #### The following screenshots were created using the Gazebo simulation software.
 
-<img src="https://github.com/janek-gross/allbot/blob/main/images/visual.png?raw=true" width="400" />
+<img src="https://github.com/janek-gross/allbot/blob/main/images/visual.png?raw=true" title="hi" width="400" />
 
 <img src="https://github.com/janek-gross/allbot/blob/main/images/allbot_visual.jpg?raw=true" width="400" />
 
