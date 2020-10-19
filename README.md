@@ -13,9 +13,6 @@ The used meshes are available at https://www.thingiverse.com/thing:1434665
 
 <img src="https://github.com/janek-gross/allbot/blob/main/images/allbot_visual.jpg?raw=true" width="400" />
 
-
-<img src="https://github.com/janek-gross/allbot/blob/main/images/motion.png?raw=true" width="400" />
-
 <img src="https://vertex3dprinter.eu/wp-content/uploads/2018/07/vr618-600x450.jpg?raw=true" width="400" />
 
 # License
